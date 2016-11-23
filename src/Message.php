@@ -162,7 +162,7 @@ class Message implements \JsonSerializable
     private function createTo()
     {
         switch ($this->recipientType) {
-            case Topic::class:
+            case 'sngrl\PhpFirebaseCloudMessaging\Recipient\Topic':
                 if (count($this->recipients) > 1) {
                     throw new \UnexpectedValueException(
                         'Currently messages to target multiple topics do not work, but its obviously planned: '.
@@ -171,7 +171,7 @@ class Message implements \JsonSerializable
                 }
                 return sprintf('/topics/%s', current($this->recipients)->getName());
                 break;
-            case Device::class:
+            case 'sngrl\PhpFirebaseCloudMessaging\Recipient\Device':
                 if (count($this->recipients) == 1) {
                     return current($this->recipients)->getToken();
                 }

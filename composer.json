@@ -11,21 +11,14 @@
         }
     ],
     "require": {
-        "guzzlehttp/guzzle": "*",
-        "php": ">=5.5"
+        "guzzlehttp/guzzle": "~5.0",
+        "php": "~5.4",
+        "psr/http-message": "^1.0"
     },
-    "require-dev": {
-        "phpunit/phpunit": "*",
-        "mockery/mockery" : "*"
-    },
+
     "autoload": {
         "psr-4": {
             "sngrl\\PhpFirebaseCloudMessaging\\": "src/"
-        }
-    },
-    "autoload-dev": {
-        "psr-4": {
-            "sngrl\\PhpFirebaseCloudMessaging\\Tests\\": "tests/"
         }
     }
 }
