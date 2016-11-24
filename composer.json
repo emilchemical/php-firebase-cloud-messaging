@@ -20,5 +20,10 @@
         "psr-4": {
             "sngrl\\PhpFirebaseCloudMessaging\\": "src/"
         }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "2.3.x-dev"
+        }
     }
 }
